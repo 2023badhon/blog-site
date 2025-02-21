@@ -1,3 +1,13 @@
+media/
+static/images/
+# Ignore all images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from posts.views import post_list_view, portfolio_view
+from posts.views import post_list_view, portfolio_view, single_post_view
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -30,8 +30,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("post-list",post_list_view),
-    path("portfolio", portfolio_view),
+    path("post-list",post_list_view, name= "post-list"),
+    path("portfolio", portfolio_view,),
+    path("single-post/<int:id>", single_post_view,name="individual-post"),
 ]
 # Serve media files during development
 if settings.DEBUG:
